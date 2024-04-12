@@ -1,0 +1,41 @@
+{
+  "name": "library",
+  "version": "1.42.0",
+  "description": "技术人员知识库",
+  "author": "feng",
+  "license": "MIT",
+  "homepage": "",
+  "funding": "",
+  "private": false,
+  "scripts": {
+    "prepare": "husky",
+    "build": "refs-cli",
+    "start": "refs-cli --watch",
+    "prettier": "prettier --write '**/*.{mjs,css,json,prettierrc,lintstagedrc}'",
+    "markdownlint": "npx markdownlint-cli --fix ./docs/*.md"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jackconfeng/library.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jackconfeng/library/issues"
+  },
+  "keywords": [],
+  "lint-staged": {
+    "**/*.{mjs,css,json,prettierrc,lintstagedrc}": "prettier --write",
+    "*.md": "markdownlint --fix",
+    "docs/*.md": "markdownlint --fix"
+  },
+  "devDependencies": {
+    "husky": "^9.0.11",
+    "lint-staged": "^15.0.0",
+    "markdownlint": "^0.33.0",
+    "markdownlint-cli": "^0.39.0",
+    "prettier": "^3.0.0",
+    "refs-cli": "^1.5.1"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
